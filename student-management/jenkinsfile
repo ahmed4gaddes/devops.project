@@ -1,9 +1,13 @@
 pipeline {
     agent any
+    tools {
+        maven 'M2_HOME'
+    }
     stages {
-        stage('Test') {
+        stage('GIT') {
             steps {
-                echo 'Pipeline exécuté depuis Jenkinsfile'
+                git branch: 'main',
+                    url: 'https://github.com/ahmed4gaddes/devops.project.git'
             }
         }
     }
