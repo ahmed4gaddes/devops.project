@@ -8,6 +8,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/ahmed4gaddes/devops.project.git'
+                sh 'mvn clean'
             }
         }
     }
